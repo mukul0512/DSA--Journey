@@ -7,6 +7,7 @@ let arr = [-4, -9, 0, 2, 8, 7, 1, 10, -10, 10];
 let firstLargest = -Infinity;
 let secondLargest = -Infinity;
 function findSecondLargestNumber(arr) {
+    if(arr.length < 2) return null;
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] > firstLargest) {
             secondLargest = firstLargest;
