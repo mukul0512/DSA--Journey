@@ -26,18 +26,31 @@ Constraints:
 
 0 <= n <= 30
 */
+// ----------------------------------------------------------------------------
+// 509. Fibonacci Number
+// using Iterative Approach
+// let n = 9;
+// let prev = 0;
+// let curr = 1;
+// function fibonacciNumber(n) {
+//     for (let i = 2; i <= n; i++) {
+//         let next = prev + curr;
+//         prev = curr;
+//         curr = next;
+//     }
+//     return curr;
+// }
+// let res = fibonacciNumber(n);
+// console.log(res);
 
-let n = 9;
-let prev = 0;
-let curr = 1;
-function fibonacciNumber(n) {
-    for (let i = 2; i <= n; i++) {
-        let next = prev + curr;
-        prev = curr;
-        curr = next;
-    }
-    return curr;
+// --------------------------------------------------------------
+// 509. Fibonacci Number
+// using Recursion Approach
+
+let n = 8;
+function fib(n) {
+    if (n <= 1) return n;
+    return fib(n - 1) + fib(n - 2);
 }
-let res = fibonacciNumber(n);
+let res = fib(n);
 console.log(res);
-
