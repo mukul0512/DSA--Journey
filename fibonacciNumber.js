@@ -27,3 +27,17 @@ Constraints:
 0 <= n <= 30
 */
 
+let n = 9;
+let prev = 0;
+let curr = 1;
+function fibonacciNumber(n) {
+    for (let i = 2; i <= n; i++) {
+        let next = prev + curr;
+        prev = curr;
+        curr = next;
+    }
+    return curr;
+}
+let res = fibonacciNumber(n);
+console.log(res);
+
